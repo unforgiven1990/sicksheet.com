@@ -4,7 +4,7 @@ d_data={
 "#table1": [
         ['Year', 'Honda', 'NIO', 'Li'],
         ['2017', 0, 0, 0],
-        ['2018', 10, 11, 12],
+        ['2018', 10, "上海", 12],
         ['2019', 20, 11, 14],
       ],
 "#table2": [
@@ -105,5 +105,56 @@ $('#jointype').change(function() {
 
 
 myjoin()
+
+
+function downloadCSV(){
+//doenst work yet
+    var str = encodeURIComponent($('div[id$=table3] > .ht_master').html())
+    var uri = 'data:text/csv;charset=utf-8,' + str;
+
+    var downloadLink = document.createElement("a");
+    downloadLink.href = uri;
+    downloadLink.download = "joined.csv";
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
+
+
+function downloadEXCEL(){
+    window.open('data:application/vnd.ms-excel' + encodeURIComponent($('div[id$=table3] > .ht_master').html() )  );
+
+}
+
+
+function downloadHOT(){
+
+}
+
+$("#download").click(function(e) {
+    //downloadEXCEL()
+});
+
+
+const exportPlugin = hot3.getPlugin('exportFile');
+const button = document.querySelector('#download');
+
+    button.addEventListener('click', () => {
+      exportPlugin.downloadFile('csv', {
+        bom: false,
+        columnDelimiter: ',',
+        columnHeaders: false,
+        exportHiddenColumns: true,
+        exportHiddenRows: true,
+        fileExtension: 'csv',
+        filename: $("#jointype option:selected").text()+'_[YYYY]-[MM]-[DD]',
+        mimeType: 'text/csv;charset=utf-8,',
+        rowDelimiter: '\r\n',
+        rowHeaders: true
+      });
+    });
+
+
 
 })
