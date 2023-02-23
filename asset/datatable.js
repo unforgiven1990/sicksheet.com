@@ -63,7 +63,7 @@ hot2.addHook('afterChange', (row, amount) => {
 })
 
 //set color of table 1 and 2
-function setColor(hot, color="#00FF90"){
+function setColor(hot, color="#fff"){
 var rows=hot.countRows();  // get the count of the rows in the table
 for(var row=0; row<rows; row++){  // go through each row of the table
         var cell = hot.getCell(row,0);
@@ -113,7 +113,7 @@ $("#jointype").prop("disabled", true)
 $("#download").prop("disabled", true)
 $("#title3").addClass("text-muted")
 $("#title4").addClass("text-muted")
-$("#leftalert").html("Error: The first columns must have the same name. <b>"+key1+" ≠ "+key2+"</b>")
+$("#leftalert").html("Key Error: The first columns must have the same name. <b>"+key1+" ≠ "+key2+"</b>")
 setColor(hot1, "#f8d7da")
 setColor(hot2, "#f8d7da")
 setColor(hot3, "#f8d7da")
