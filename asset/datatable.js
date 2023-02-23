@@ -2,16 +2,18 @@ $(document).ready(function() {
 
 d_data={
 "#table1": [
-        ['Year', 'Honda', 'NIO', 'Li'],
-        ['2017', 0, 0, 0],
-        ['2018', 10, "上海", 12],
-        ['2019', 20, 11, 14],
+        ['Name', 'Age','Car Brand'],
+        ['Ali', "20","NIO"],
+        ['Max', "33","Tesla"],
+        ['James', "27","BMW"],
+        ['Jane', "25","Mercedes"],
       ],
 "#table2": [
-         ['Year', 'BMW', 'Audi', 'Tesla'],
-        ['2018', 0, 0, 0],
-        ['2019', 10, 11, 12],
-        ['2020', 20, 11, 14],
+         ['Name', 'Country', 'Height'],
+        ['Ali', "Italy", "1.7"],
+        ['Eric', "USA", "1.8"],
+        ['Jane', "Germany", "1.6"],
+        ['Anna', "Japan", "1.7"],
       ],
 "#table3": [[1,2,3],[4,5,6]],
 }
@@ -26,11 +28,18 @@ d_readonly={
 for(let [index, item] of ["#table1","#table2","#table3"].entries() ){
     $(item).handsontable({
       data: d_data[item],
-      width: '100%',
       rowHeaders: true,
       colHeaders: true,
       contextMenu: true,
       readOnly: d_readonly[item],
+      renderAllRows: false,
+      manualRowMove: true,
+      manualColumnMove: true,
+      colWidths: 100,
+      width: '100%',
+      height: 180,
+      viewportColumnRenderingOffset:5,
+      viewportRowRenderingOffset:5,
       licenseKey:'non-commercial-and-evaluation'
     })
 }
@@ -39,6 +48,7 @@ for(let [index, item] of ["#table1","#table2","#table3"].entries() ){
 hot1 =$("#table1").handsontable('getInstance')
 hot2 =$("#table2").handsontable('getInstance')
 hot3 =$("#table3").handsontable('getInstance')
+
 hot1.addHook('afterChange', (row, amount) => {
     myjoin()
 })
@@ -67,27 +77,58 @@ function myjoin(){
 //get data
 data1=hot1.getData()
 data2=hot2.getData()
-df1 = new dfd.DataFrame(data1, { columns: data1[0] })
-df2 = new dfd.DataFrame(data2, { columns: data2[0] })
+
+colheader1=data1[0]
+colheader2=data2[0]
+key=colheader1[0]
+console.log(key)
+console.log(colheader1)
+console.log(colheader2)
+console.log(data1)
+console.log(data2)
+data1.shift()
+data2.shift()
+console.log(data1)
+console.log(data2)
+df1 = new dfd.DataFrame(data1, { columns: colheader1})
+df2 = new dfd.DataFrame(data2, { columns: colheader2 })
+console.log(df1)
+console.log(df2)
+
 
 //join
 jointype=$("#jointype").val()
 console.log(jointype)
-df3 = dfd.merge({ "left": df1, "right": df2, "on": ["Year"], how: jointype})
-data3=dfd.toJSON(df3,{ format: 'column' })
+
+df3 = dfd.merge({ "left": df1, "right": df2, "on": [colheader1[0]], how: jointype})
+
+
+datawithcol=[df3.columns].concat(df3.values)
+//data3=dfd.toJSON(df3,{ format: 'column' }) //make it a independend variable
+
+console.log(df3)
+console.log(datawithcol)
 
 //for some reason the column title is in the bottom, use this function to make it top
-data3=[data3[data3.length-1]].concat(data3)
-data3.pop()
+//data3=[data3[data3.length-1]].concat(data3)
+//data3.pop()
 
 
 //create table
     $("#table3").handsontable({
-      data: data3,
+      data: datawithcol,
       rowHeaders: true,
       colHeaders: true,
       contextMenu: true,
       readOnly: d_readonly["#table3"],
+      renderAllRows: false,
+      manualRowMove: true,
+      manualColumnMove: true,
+      colWidths: 100,
+      width: '100%',
+      height: 180,
+      viewportColumnRenderingOffset:10,
+      viewportRowRenderingOffset:10,
       licenseKey:'non-commercial-and-evaluation'
     })
 
@@ -100,7 +141,8 @@ data3.pop()
 
 
 $('#jointype').change(function() {
-    myjoin()
+
+    myjoin();
 })
 
 
@@ -210,6 +252,10 @@ steps.innerHTML = wizards
 
 
 
+$("#step1tooltip").tooltip()
+$("#step2tooltip").tooltip()
+$("#step3tooltip").tooltip()
+$("#step4tooltip").tooltip()
 
 
 })
