@@ -15,7 +15,7 @@ d_data={
         ['Jane', "Germany", "1.6"],
         ['Anna', "Japan", "1.7"],
       ],
-"#table3": [[1,2,3],[4,5,6]],
+"#table3": [],
 }
 
 d_readonly={
@@ -24,24 +24,27 @@ d_readonly={
 "#table3":true,
 }
 
-
-for(let [index, item] of ["#table1","#table2","#table3"].entries() ){
-    $(item).handsontable({
-      data: d_data[item],
+function init(data){
+return {
+      data: data,
       rowHeaders: true,
       colHeaders: true,
       contextMenu: true,
-      readOnly: d_readonly[item],
+      readOnly: false,
       renderAllRows: false,
       manualRowMove: true,
       manualColumnMove: true,
       colWidths: 100,
       width: '100%',
-      height: 180,
+      height: 150,
       viewportColumnRenderingOffset:5,
       viewportRowRenderingOffset:5,
       licenseKey:'non-commercial-and-evaluation'
-    })
+    }
+}
+
+for(let [index, item] of ["#table1","#table2","#table3"].entries() ){
+    $(item).handsontable(init(data=d_data[item]))
 }
 
 
@@ -50,18 +53,21 @@ hot2 =$("#table2").handsontable('getInstance')
 hot3 =$("#table3").handsontable('getInstance')
 
 hot1.addHook('afterChange', (row, amount) => {
+    myvalidation()
     myjoin()
 })
+
 hot2.addHook('afterChange', (row, amount) => {
+    myvalidation()
     myjoin()
 })
 
 //set color of table 1 and 2
-function setColor(hot){
+function setColor(hot, color="#00FF90"){
 var rows=hot.countRows();  // get the count of the rows in the table
 for(var row=0; row<rows; row++){  // go through each row of the table
         var cell = hot.getCell(row,0);
-        cell.style.background = "#00FF90";
+        cell.style.background = color;
 }
 }
 
@@ -70,7 +76,11 @@ setColor(hot2)
 
 
 
+function myvalidation(){
+//check if they have first column
+//check if the first column is called same
 
+}
 
 
 function myjoin(){
@@ -80,16 +90,39 @@ data2=hot2.getData()
 
 colheader1=data1[0]
 colheader2=data2[0]
-key=colheader1[0]
-console.log(key)
-console.log(colheader1)
-console.log(colheader2)
-console.log(data1)
-console.log(data2)
+
+
+//check if they have first column
+//check if the first column is called same
+key1=colheader1[0]
+key2=colheader2[0]
+
+if (key1==key2){
+//good
+$("#leftalert").hide()
+$("#jointype").prop("disabled", false)
+$("#download").prop("disabled", false)
+$("#title3").removeClass("text-muted")
+$("#title4").removeClass("text-muted")
+setColor(hot1)
+setColor(hot2)
+}else{
+//return
+$("#leftalert").show()
+$("#jointype").prop("disabled", true)
+$("#download").prop("disabled", true)
+$("#title3").addClass("text-muted")
+$("#title4").addClass("text-muted")
+$("#leftalert").html("Error: The first columns must have the same name. <b>"+key1+" ≠ "+key2+"</b>")
+setColor(hot1, "#f8d7da")
+setColor(hot2, "#f8d7da")
+setColor(hot3, "#f8d7da")
+return
+}
+
+
 data1.shift()
 data2.shift()
-console.log(data1)
-console.log(data2)
 df1 = new dfd.DataFrame(data1, { columns: colheader1})
 df2 = new dfd.DataFrame(data2, { columns: colheader2 })
 console.log(df1)
@@ -114,39 +147,39 @@ console.log(datawithcol)
 //data3.pop()
 
 
-//create table
-    $("#table3").handsontable({
-      data: datawithcol,
-      rowHeaders: true,
-      colHeaders: true,
-      contextMenu: true,
-      readOnly: d_readonly["#table3"],
-      renderAllRows: false,
-      manualRowMove: true,
-      manualColumnMove: true,
-      colWidths: 100,
-      width: '100%',
-      height: 180,
-      viewportColumnRenderingOffset:10,
-      viewportRowRenderingOffset:10,
-      licenseKey:'non-commercial-and-evaluation'
-    })
-
-    setColor(hot1)
-    setColor(hot2)
+    //create table
+    $("#table3").handsontable(init(data=datawithcol))
+    hot3 =$("#table3").handsontable('getInstance')
+    hot3.updateSettings({
+    //readOnly: true, // make table cells read-only
+    editor: false
+    });
     setColor(hot3)
+
 
  }
 
 
 
 $('#jointype').change(function() {
-
-    myjoin();
+    showjoinimg()
+    myjoin()
 })
 
 
+function showjoinimg(){
+//depending on what join type is selected, show related image
+jointype = $("#jointype option:selected").val()
+$("#joinimg").attr("src", "asset/"+jointype+".png");
+}
+
+
+$("#leftalert").hide()
 myjoin()
+showjoinimg()
+
+
+
 
 
 function downloadCSV(){

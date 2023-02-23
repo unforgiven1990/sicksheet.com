@@ -4,6 +4,23 @@
 }
 
 
+.accordion-body{
+background-color:#e6e6e6;
+}
+
+
+#joinimg{
+height:auto;
+width:100%;
+padding: 50px;
+padding-top:20px;
+padding-bottom:20px;
+}
+
+.spacer{
+height:60px;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -47,13 +64,13 @@
   margin: 0;
 }
 .step:not(:last-child):after {
-  height: 68%;
+  height: 100%;
 }
 
 .number {
   width: 32px;
   height: 32px;
-  background-color: transparent;
+  background-color: white;
   border-radius: 50%;
   border: 2px solid #192fcd;
   flex-shrink: 0;
@@ -67,6 +84,7 @@
 }
 .number.completed {
   background-color: #192fcd;
+  color:white;
 }
 .number svg {
   width: 16px;
