@@ -1,4 +1,5 @@
 $(document).ready(function() {
+var DataFrame = dfjs.DataFrame
 
 d_data={
 "#table1": [
@@ -120,31 +121,25 @@ setColor(hot3, "#f8d7da")
 return
 }
 
-
 data1.shift()
 data2.shift()
+jointype=$("#jointype").val()
+
+
+if (false){//do with danfo
 df1 = new dfd.DataFrame(data1, { columns: colheader1})
 df2 = new dfd.DataFrame(data2, { columns: colheader2 })
-console.log(df1)
-console.log(df2)
-
-
-//join
-jointype=$("#jointype").val()
-console.log(jointype)
-
 df3 = dfd.merge({ "left": df1, "right": df2, "on": [colheader1[0]], how: jointype})
-
-
 datawithcol=[df3.columns].concat(df3.values)
-//data3=dfd.toJSON(df3,{ format: 'column' }) //make it a independend variable
+}else{ //do with data-forge-ts
+df1 = new DataFrame(data1, colheader1)
+df2 = new DataFrame(data2, colheader2)
+df3=df1.join(df2, key1, jointype)
+datawithcol=[df3.listColumns()].concat(df3.toArray())
+}
 
-console.log(df3)
-console.log(datawithcol)
 
-//for some reason the column title is in the bottom, use this function to make it top
-//data3=[data3[data3.length-1]].concat(data3)
-//data3.pop()
+
 
 
     //create table
