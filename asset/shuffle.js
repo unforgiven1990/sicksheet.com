@@ -1,11 +1,21 @@
+function initiate_options() {
+    //button add listener
+    $('#shuffle').click(function() {
+        tool()
+    })
+}
+
 function tool() {
+console.log("tool shuffle")
     //get data
     data1 = hot1.getData()
+    colheader1 = data1[0]
+    data1.shift()
 
     //do with data-forge-ts
-    df1 = new dfjs.DataFrame(data1, data1[0])
-    df2 = df1.transpose()
-    datawithcol = [].concat(df2.toArray())
+    df1 = new dfjs.DataFrame(data1, colheader1)
+    df2 = df1.shuffle()
+    datawithcol = [df2.listColumns()].concat(df2.toArray())
 
     //create table
     $("#table2").handsontable(datainit(data = datawithcol))
@@ -14,17 +24,14 @@ function tool() {
         //readOnly: true, // make table cells read-only
         editor: false
     });
-
-    //add little highlight to indicate the swapped result
-    setColorColumn(hot1, color1)
-    setColorRow(hot2, color1)
 }
 
 
 //init function
 function init() {
     hot1.addHook('afterChange', (row, amount) => {
+        initiate_options()
         tool()
     })
-    tool()
+    initiate_options()
 }

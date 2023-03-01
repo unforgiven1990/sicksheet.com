@@ -1,11 +1,20 @@
+function initiate_options() {
+    $('#n').attr('max', data1 = hot1.countRows()-1)
+}
+
+
 function tool() {
     //get data
     data1 = hot1.getData()
+    colheader1 = data1[0]
+    data1.shift()
+    n=$('#n').val()
 
     //do with data-forge-ts
-    df1 = new dfjs.DataFrame(data1, data1[0])
-    df2 = df1.transpose()
-    datawithcol = [].concat(df2.toArray())
+    df1 = new dfjs.DataFrame(data1, colheader1)
+    df2 = df1.tail(n)
+    datawithcol = [df2.listColumns()].concat(df2.toArray())
+
 
     //create table
     $("#table2").handsontable(datainit(data = datawithcol))
@@ -15,16 +24,19 @@ function tool() {
         editor: false
     });
 
-    //add little highlight to indicate the swapped result
-    setColorColumn(hot1, color1)
-    setColorRow(hot2, color1)
 }
 
 
 //init function
 function init() {
     hot1.addHook('afterChange', (row, amount) => {
+        initiate_options()
         tool()
     })
-    tool()
+
+    $('#n').change(function() {
+        tool()
+    })
+
+    initiate_options()
 }
