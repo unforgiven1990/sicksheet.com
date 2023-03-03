@@ -1,6 +1,4 @@
 function tool() {
-console.log("tool")
-    //get data
     data1 = hot1.getData()
     data2 = hot2.getData()
     colheader1 = data1[0]
@@ -26,7 +24,7 @@ console.log("tool")
         setColorRow(hot3, "#f8d7da")
         return
     }
-    console.log("tool1")
+
     data1.shift()
     data2.shift()
     jointype = $("#jointype").val()
@@ -34,7 +32,6 @@ console.log("tool")
     df2 = new dfjs.DataFrame(data2, colheader2)
     df3 = df1.join(df2, key1, jointype)
     datawithcol = [df3.listColumns()].concat(df3.toArray())
-    //create table
     data_to_hot("#table3",datawithcol)
     setColorRow(hot3, color1)
 }
@@ -59,5 +56,4 @@ function init() {
     $("#leftalert").hide()
     showjoinimg()
     tool()
-
 }

@@ -100,18 +100,24 @@ function downloadEXCEL() {
 
 
 
-function listener_configure(array){
-    $.each(array, function(key, val) {
-        $(val).change(function() {
-                tool()
+function listener_configure(a_elements,a_functions=[],event="change"){
+    a_functions.push(tool)
+    $.each(a_elements, function(arrakey, element) {
+        $.each(a_functions, function(funckey, func) {
+            $(element).bind(event,function(){
+              func()
+            })
         })
     })
 }
 
-function listener_table(array){
-    $.each(array, function(key, val) {
-         val.addHook('afterChange', (row, amount) => {
-            tool()
+function listener_table(a_elements,a_functions=[]){
+    a_functions.push(tool)
+    $.each(a_elements, function(arrakey, hot) {
+        $.each(a_functions, function(funckey, func) {
+            hot.addHook('afterChange', (row, amount) => {
+              func()
+            })
         })
     })
 }
