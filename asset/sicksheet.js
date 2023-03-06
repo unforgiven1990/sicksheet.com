@@ -1,4 +1,7 @@
 
+color1 = "#d3eaf2"
+color2 = "#f8d7da"//alert danger
+color3 = "#fff3cd"//alert warning
 
 function example1(){
 return {
@@ -37,7 +40,31 @@ function setColorColumn(hot, color = "#fff", colindex = 0) {
         cell.style.background = color;
     }
 }
+function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
 
+
+function setColorNonNumeric(hot, color = color3) {
+    var cols = hot.countCols(); // get the count of the rows in the table
+    var rows = hot.countRows(); // get the count of the rows in the table
+    has_non_numeric=false
+    for (var col = 0; col < cols; col++) { // go through each row of the table
+        for (var row = 0; row < rows; row++) {
+            var cell = hot.getCell(row, col)
+            if (!isNumber(hot.getDataAtCell(row,col))){
+                cell.style.background = color
+                has_non_numeric=true
+            }
+
+        }
+    }
+    return has_non_numeric
+}
+
+function myexport2(){
+//download txt file instead of csv file
+data=encodeURIComponent($('#mycode').html())
+window.open('data:text/plain;charset=utf-8,' + data)
+}
 
 function myexport(hot, name) {
     //setup download button
@@ -75,6 +102,7 @@ function datainit(mydata) {
         height: 150,
         viewportColumnRenderingOffset: 5,
         viewportRowRenderingOffset: 5,
+
         licenseKey: 'non-commercial-and-evaluation'
     }
 }
@@ -96,6 +124,26 @@ function downloadCSV() {
 
 function downloadEXCEL() {
     window.open('data:application/vnd.ms-excel' + encodeURIComponent($('div[id$=table3] > .ht_master').html()));
+}
+
+
+function download_text(filename="data.csv",button_id="#download", content="#mycode"){
+    // Start file download.
+       $(button_id).click(function(){
+           content=$(content).html()
+           download(filename, content)
+       })
+}
+
+//download that works
+function download(filename, text) {
+       var element = document.createElement('a');
+       element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+       element.setAttribute('download', filename);
+       element.style.display = 'none';
+       document.body.appendChild(element);
+       element.click()
+       document.body.removeChild(element)
 }
 
 
@@ -122,18 +170,32 @@ function listener_table(a_elements,a_functions=[]){
     })
 }
 
-function hot_to_dataframe(hot){
-    data1 = hot.getData()
-    colheader1 = data1[0]
-    data1.shift()
-    df = new dfjs.DataFrame(data1, colheader1)
-    return df
+function hot_to_dataframe(hot,col=true){
+    //dataiscol =first column data is column
+    //
+    if (col){
+    hot_data = hot.getData()
+    hot_column = hot_data[0]
+    hot_data.shift()
+    return new dfjs.DataFrame(hot_data, hot_column)
+    }else{
+    hot_data = hot.getData()
+    console.log("3 hot_data ",hot_data)
+    return new dfjs.DataFrame(hot_data)
+    }
 }
+
+function hot_to_danfo(hot){
+    hot_data = hot.getData()
+    hot_column = hot_data[0]
+    return new dfd.DataFrame(hot_data,{columns:hot_column})
+}
+
 
 function data_to_hot(id,datawithcol){
     $(id).handsontable(datainit(datawithcol))
-    hot2 = $(id).handsontable('getInstance')
-    hot2.updateSettings({
+    hot = $(id).handsontable('getInstance')
+    hot.updateSettings({
         //readOnly: true, // make table cells read-only
         editor: false
     })
@@ -152,7 +214,11 @@ function main() {
     configure_onchange() // event trigger
     init()// to start the tool, eg. hiding something
     */
-
+    try{
+        d_data = exampletool()
+    }catch{
+        d_data = example1()
+    }
 
     for (let [index, item] of ["#table1", "#table2", "#table3"].entries()) {
         try {
@@ -161,16 +227,47 @@ function main() {
         //todo for the third table id
         }
     }
-    color1 = "#d3eaf2"
+
     $(".mytooltip").tooltip()
     hot1 = $("#table1").handsontable('getInstance')
     hot2 = $("#table2").handsontable('getInstance')
     hot3 = $("#table3").handsontable('getInstance')
-    myexport(hot2, $("header").data("tool"))
+    try{//because not every tool has a download button
+        myexport(hot2, $("header").data("tool"))
+    }catch{
+    }
+
     init()
+
+    //pyodided_test()
 }
 
 
 //init
-d_data = example1()
 $(document).ready(main)
+
+
+function addTwoNumbers(x, y){
+        return x + y;
+    }
+
+
+async function pyodided_test(){
+namelol = "Jeff"
+let pyodide = await loadPyodide()
+ //await pyodide.loadPackage("pandas")
+console.log(pyodide.runPython(`
+    #import pandas as pd
+    import js
+
+    from js import namelol, addTwoNumbers, console
+    js.myname=namelol+"fuu yeah house"
+    print("Hello " + namelol + ".Adding 1 and 2 in Javascript: " + str(addTwoNumbers(1, 2)))
+
+
+`));
+
+console.log(myname)
+}
+
+
