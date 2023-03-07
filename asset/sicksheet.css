@@ -8,6 +8,33 @@
 background-color:#e6e6e6;
 }
 
+.math, .statistic{
+color: #212529 !important;
+background-color:#ffb3ba !important;
+}
+
+.general{
+color: #212529 !important;
+background-color:#e0e0e0 !important;
+}
+
+.text{
+color: #212529 !important;
+background-color:#ffdfba !important;
+}
+
+.database{
+color: #212529 !important;
+background-color:#ffffba !important;
+}
+
+.input, .output{
+color: #212529 !important;
+background-color:#baffc9 !important;
+}
+
+
+
 
 #joinimg{
 height:auto;
