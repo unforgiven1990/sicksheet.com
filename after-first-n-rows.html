@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <title>After First n Rows</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="{toolscription}">
+    <meta name="keywords" content="Get the first n rows of a spreadsheet.">
+    <meta name="author" content="CJ Huang">
+    <meta name="viewport" content="width=device-width,  initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="asset/sicksheet.com.ico">
+
+
+    <!--<script defer src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>-->
+    <script async src="asset/jquery-3.6.3.min.js"></script>
+
+    <!--<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>-->
+    <script async src="asset/bootstrap.bundle.min.5.2.3.js"></script>
+
+    <!--<script defer src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>-->
+    <script async src="asset/handsontable.full.min.js"></script>
+
+    <!--<script defer src="https://gmousse.github.io/dataframe-js/dist/dataframe.min.js"></script>-->
+    <script async src="asset/dataframe.min.js"></script>
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>-->
+    <!--<script defer src="asset/danfo.bundle.min.1.1.2.js"></script>-->
+
+    <script defer src="https://unpkg.com/mathjs@11.6.0/lib/browser/math.js"></script>
+
+    <!-- brython: has no standard pandas library.
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.2/brython.min.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.2/brython_stdlib.js"></script>
+       -->
+
+    <!--pydiode : overall the best
+    <script defer src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>-->
+
+
+    <!--pyscript
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />-->
+
+
+
+    <script defer src="asset/cj.js" ></script>
+    <script defer src="asset/tools/after-first-n-rows.js"  ></script>
+    <script defer src="asset/sicksheet.js"  ></script>
+
+
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">-->
+    <link href="asset/bootstrap.min.5.2.3.css" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />-->
+    <link href="asset/handsontable.full.min.css" rel="stylesheet">
+
+    <link href="asset/cj.css" rel="stylesheet">
+    <link href="asset/sicksheet.css" rel="stylesheet">
+
+
+</head>
+
+
+<body class="px-3 px-md-0"  >
+    <nav class="navbar navbar-expand-lg  " aria-label="Eighth navbar example">
+  <div class="container ">
+      <a href="index.html" class="navbar-brand fw-bold">
+          SICK.SHEET.</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarinstance" aria-controls="navbarinstance" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarinstance">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+     <a class="nav-link" href="tools/index.html" >
+         Tools
+     </a>
+</li>
+<li class="nav-item dropdown">
+     <a class="nav-link" href="blog/index.html" >
+         Blog
+     </a>
+</li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container max-width-80  ">
+
+  <header class="" data-tool="after-first-n-rows">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col">
+                            <div class="my-5 mx-3 text-center">
+                                <h1 class="display-5 fw-bolder text-black mb-1 "><span class="">After First n Rows</span> Online</h1>
+                                <p class="lead fw-normal text-black mb-3 fs-6"><h2>Get the first n rows of a spreadsheet.</h2>
+
+                                <!--<br>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>No Ads<br><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>No Login<br><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>100% Free-->
+
+                                </p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-center ">
+                                    <a class="btn btn-primary  px-4" href="#start">Start</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+<div id='start' class='wrapper pt-5'>
+    <div class='steps' id='steps'>
+        <div class='step'>
+<div class='number completed'>1</div>
+<div class='info'>
+  <p class='title'>Input
+      <i  id="step1tooltip" class="mytooltip" data-bs-toggle="tooltip"  title="Copy paste your table here."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </svg></i>
+  </p>
+    <!--<div id="table1"></div>-->
+    <div id="table1"></div>
+</div>
+</div>
+
+<div class='step'>
+<div class='number completed'>2</div>
+<div class='info'>
+  <p class='title'>Configure
+      <i  id="step2tooltip" class="mytooltip" data-bs-toggle="tooltip"  title="Configure the options."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </svg></i>
+  </p>
+    <!--<div id="table1"></div>-->
+    <div class="form-group">
+      <label id="n_label" class="control-label col" for="n">First n Rows:</label>
+      <div class="col">
+       <input id="n" type="range" class="form-range" min="1" max="100">
+      </div>
+</div>
+</div>
+</div>
+
+<div class='step'>
+<div class='number completed'>3</div>
+<div class='info'>
+  <p class='title'>Download
+      <i  id="step3tooltip" class="mytooltip" data-bs-toggle="tooltip"  title="Copy or Download your result in CSV."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </svg></i>
+  </p>
+    <!--<div id="table1"></div>-->
+    <div id="table2"></div><button id="download" type="button" class="btn btn-primary width50" style="display:inline-block;width:100%;margin:0px;" >Download</button>
+</div>
+</div>
+
+
+    </div>
+</div>
+
+<p class=" spacer" ></p>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="heading1">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" >
+        Q: Can I upload my data as .xlsx or .csv file?
+      </button>
+    </h2>
+    <div id="collapse1" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       A: Upload data as .xlsx or .csv file is not supported yet. You can copy paste your data from excel into the website table above.
+      </div>
+    </div>
+</div><div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" >
+        Q: Can it handle big data sets?
+      </button>
+    </h2>
+    <div id="collapse2" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       A: Upload data as .xlsx or .csv file is not supported yet.   A: Yes it can handle tables up to 6000 columns and rows. If you encounter lag, you can reduce the sheet size.
+      </div>
+    </div>
+</div><div class="accordion-item">
+    <h2 class="accordion-header" id="heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" >
+        Q: It is normal that it lags a couple of seconds during copy paste?
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       A: Yes this is normal for a web based application (especially when the data set is large).
+      </div>
+    </div>
+</div><div class="accordion-item">
+    <h2 class="accordion-header" id="heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" >
+        Q: The provided spreadsheet interface is very small. Can you make it bigger?
+      </button>
+    </h2>
+    <div id="collapse4" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       A: It is recommended to paste data into Excel to manage a bigger data sets.
+      </div>
+    </div>
+</div><div class="accordion-item">
+    <h2 class="accordion-header" id="heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" >
+        Q: What plugin do you use to build this tool?
+      </button>
+    </h2>
+    <div id="collapse5" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       A: Bootstrap, Handsontable.js and dataframe.js.
+      </div>
+    </div>
+</div>
+</div><!-- accordion ends-->
+
+
+</div>
+
+
+
+
+    <div id="footer" class="mt-6">
+  <div class="container text-center">
+    <p class="text-muted credit" style="color:#fff"> <a href="https://sicksheet.com">sicksheet.com</a> @ 2023</p>
+  </div>
+</div>
+    <script>
+    </script>
+</body>
+</html>

@@ -2,6 +2,7 @@
 color1 = "#d3eaf2"
 color2 = "#f8d7da"//alert danger
 color3 = "#fff3cd"//alert warning
+color4 = "#d4edda"//alert success
 
 function example1(){
 return {
@@ -54,7 +55,23 @@ function setColorNonNumeric(hot, color = color3) {
                 cell.style.background = color
                 has_non_numeric=true
             }
+        }
+    }
+    return has_non_numeric
+}
 
+
+function setColorNumeric(hot, color = color4) {
+    var cols = hot.countCols(); // get the count of the rows in the table
+    var rows = hot.countRows(); // get the count of the rows in the table
+    has_non_numeric=false
+    for (var col = 0; col < cols; col++) { // go through each row of the table
+        for (var row = 0; row < rows; row++) {
+            var cell = hot.getCell(row, col)
+            if (isNumber(hot.getDataAtCell(row,col))){
+                cell.style.background = color
+                has_non_numeric=true
+            }
         }
     }
     return has_non_numeric
@@ -200,6 +217,8 @@ function data_to_hot(id,datawithcol){
         editor: false
     })
 }
+
+
 
 
 function main() {
