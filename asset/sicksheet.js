@@ -95,7 +95,7 @@ function myexport(hot, name) {
             exportHiddenColumns: true,
             exportHiddenRows: true,
             fileExtension: 'csv',
-            filename: name + '_[YYYY]-[MM]-[DD]',
+            filename: name.replace("-"," ") + ' [YYYY].[MM].[DD]',
             mimeType: 'text/csv;charset=utf-8,',
             rowDelimiter: '\r\n',
             rowHeaders: true

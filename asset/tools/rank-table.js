@@ -131,7 +131,5 @@ function init() {
     $('#percent').append('<option  value="false">in Natural Number</option>')
     $('#percent').append('<option  value="true">in Percent</option>')
 
-
-
     tool()
 }
