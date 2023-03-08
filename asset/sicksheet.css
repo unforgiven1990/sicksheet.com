@@ -9,28 +9,24 @@ background-color:#e6e6e6;
 }
 
 .math, .statistic{
-color: #212529 !important;
-background-color:#ffb3ba !important;
+
+background-color:#4C7AF1 !important;
 }
 
-.general{
-color: #212529 !important;
-background-color:#e0e0e0 !important;
+.filter{
+background-color:#05C793  !important;
 }
 
-.text{
-color: #212529 !important;
-background-color:#ffdfba !important;
+.text-mod{
+background-color:#EF436B !important;
 }
 
 .database{
-color: #212529 !important;
-background-color:#ffffba !important;
+background-color:#ff802a !important;
 }
 
-.input, .output{
-color: #212529 !important;
-background-color:#baffc9 !important;
+.converter{
+background-color:#d359ff !important;
 }
 
 

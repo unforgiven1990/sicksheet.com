@@ -183,10 +183,26 @@ function listener_configure(a_elements,a_functions=[],event="change"){
 
 function listener_table(a_elements,a_functions=[]){
     a_functions.push(tool)
+    a_hooks=[
+    "afterChange",
+    "afterCreateCol",
+    "afterCreateRow",
+    "afterRemoveCol",
+    "afterRemoveRow",
+    "afterColumnSort",
+    //"afterRowSort",
+    "afterColumnMove",
+    "afterRowMove",
+    "afterColumnExpand",
+    "afterRowExpand",
+    "afterAutofill",
+    ]
     $.each(a_elements, function(arrakey, hot) {
         $.each(a_functions, function(funckey, func) {
-            hot.addHook('afterChange', (row, amount) => {
-              func()
+            $.each(a_hooks, function(hookkey, hookfunc) {
+                hot.addHook(hookfunc, (row, amount) => {
+                  func()
+                })
             })
         })
     })
