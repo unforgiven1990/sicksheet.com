@@ -10,9 +10,9 @@ https://www.sicksheet.com/sample-rows
 https://www.sicksheet.com/shuffle-rows
 https://www.sicksheet.com/even-rows
 https://www.sicksheet.com/odd-rows
+https://www.sicksheet.com/text-len
 https://www.sicksheet.com/nth-row
 https://www.sicksheet.com/except-nth-row
-https://www.sicksheet.com/text-len
 https://www.sicksheet.com/char-to-number
 https://www.sicksheet.com/number-to-char
 https://www.sicksheet.com/remove-leading-space
@@ -36,8 +36,6 @@ https://www.sicksheet.com/abs-values
 https://www.sicksheet.com/round-values
 https://www.sicksheet.com/round-up
 https://www.sicksheet.com/round-down
-https://www.sicksheet.com/rank-table
-https://www.sicksheet.com/percentile-table
 https://www.sicksheet.com/add-leading-zeros
 https://www.sicksheet.com/add-trailing-zeros
 https://www.sicksheet.com/remove-leading-zeros
@@ -47,12 +45,14 @@ https://www.sicksheet.com/average
 https://www.sicksheet.com/min
 https://www.sicksheet.com/max
 https://www.sicksheet.com/random-table
-https://www.sicksheet.com/join-tables
+https://www.sicksheet.com/rank-table
+https://www.sicksheet.com/percentile-table
 https://www.sicksheet.com/transpose-table
 https://www.sicksheet.com/sort-rows
 https://www.sicksheet.com/unique-values
-https://www.sicksheet.com/group-by
 https://www.sicksheet.com/drop-duplicated-columns
+https://www.sicksheet.com/join-tables
+https://www.sicksheet.com/group-by
 https://www.sicksheet.com/to-dsv
 https://www.sicksheet.com/to-csv
 https://www.sicksheet.com/to-json
