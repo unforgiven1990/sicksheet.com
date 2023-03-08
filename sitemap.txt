@@ -59,6 +59,5 @@ https://www.sicksheet.com/to-json
 https://www.sicksheet.com/to-dict
 https://www.sicksheet.com/to-array
 https://www.sicksheet.com/to-collection
-https://www.sicksheet.com/to-dsv
 https://www.sicksheet.com/from-csv
 https://www.sicksheet.com/tools/index
