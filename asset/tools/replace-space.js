@@ -41,14 +41,14 @@ function config(){
     data1 = hot1.getData()
     columns = data1[0]
     $('#replace').html("")
-    $('#replace').append('<option value="_">Replace with Underscore _</option>')
-    $('#replace').append('<option value=".">Replace with Dot .</option>')
-    $('#replace').append('<option value="·">Replace with Interpunct ·</option>')
-    $('#replace').append('<option value="-">Replace with Minus Sign -</option>')
-    $('#replace').append('<option value="+">Replace with Plus Sign +</option>')
-    $('#replace').append('<option value=",">Replace with Comma ,</option>')
-    $('#replace').append('<option value=";">Replace with Semicolon ;</option>')
-    $('#replace').append('<option value="\n">Replace with New Line </option>')
+    $('#replace').append('<option value="_">Underscore _</option>')
+    $('#replace').append('<option value=".">Dot .</option>')
+    $('#replace').append('<option value="·">Interpunct ·</option>')
+    $('#replace').append('<option value="-">Minus Sign -</option>')
+    $('#replace').append('<option value="+">Plus Sign +</option>')
+    $('#replace').append('<option value=",">Comma ,</option>')
+    $('#replace').append('<option value=";">Semicolon ;</option>')
+    $('#replace').append('<option value="\n">New Line </option>')
 }
 
 //init function

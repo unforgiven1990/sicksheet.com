@@ -122,15 +122,14 @@ function init() {
     listener_configure(["#axis","#order","#percent"])
 
     //one time call
-    $('#axis').append('<option value="y">rank Column-wise</option>')
-    $('#axis').append('<option value="x">rank Row-wise</option>')
+      $('#axis').append('<option value="y">Column-wise</option>')
+    $('#axis').append('<option value="x">Row-wise</option>')
 
-    $('#order').append('<option value="false">Ascending Order</option>')
-    $('#order').append('<option value="true">Descending Order</option>')
+    $('#order').append('<option value="false">Ascending</option>')
+    $('#order').append('<option value="true">Descending</option>')
 
-    $('#percent').append('<option  value="true">in Percent</option>')
-    $('#percent').append('<option  value="false">in Natural Number</option>')
-
+    $('#percent').append('<option  value="true">Yes</option>')
+    $('#percent').append('<option  value="false">No</option>')
 
     tool()
 }

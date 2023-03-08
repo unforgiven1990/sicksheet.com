@@ -13,7 +13,7 @@ function config(){
     columns = data1[0]
     $('#unique').html("")
     $.each(columns, function(index, val) {
-        $('#unique').append('<option value="' + val + '">Unique values in column ' + val + '</option>')
+        $('#unique').append('<option value="' + val + '">' + val + '</option>')
     })
 }
 

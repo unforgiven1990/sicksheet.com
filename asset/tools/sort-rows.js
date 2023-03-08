@@ -15,7 +15,7 @@ function config(){
     columns = data1[0]
     $('#sortcol').html("")
     $.each(columns, function(index, val) {
-        $('#sortcol').append('<option value="' + val + '">Sort by ' + val + '</option>')
+        $('#sortcol').append('<option value="' + val + '">' + val + '</option>')
     })
 }
 
@@ -27,8 +27,8 @@ function init() {
 
     //one time call
     $('#asc').html("")
-    $('#asc').append('<option value="true">In Ascending Order</option>')
-    $('#asc').append('<option value="false">In Descending Order</option>')
+    $('#asc').append('<option value="true">Ascending</option>')
+    $('#asc').append('<option value="false">Descending</option>')
     var lastValue = $('#sortcol option:last-child').val()
     $("#sortcol").val(lastValue)
     $("#sortcol").trigger("change")

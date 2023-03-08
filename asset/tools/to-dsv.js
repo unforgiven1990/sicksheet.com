@@ -14,10 +14,10 @@ function init() {
     tool()
 
     $('#delimiter').html("")
-    $('#delimiter').append('<option value=";">Seperated by Semicolon ;</option>')
-    $('#delimiter').append('<option value=",">Seperated by Comma ,</option>')
-    $('#delimiter').append('<option value=" ">Seperated by Space </option>')
-    $('#delimiter').append('<option value="  ">Seperated by Tab   </option>')
+    $('#delimiter').append('<option value=";">Semicolon ;</option>')
+    $('#delimiter').append('<option value=",">Comma ,</option>')
+    $('#delimiter').append('<option value=" ">Space </option>')
+    $('#delimiter').append('<option value="  ">Tab   </option>')
     download_text(filename="data.txt")
 }
 

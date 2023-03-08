@@ -17,7 +17,7 @@
 <link href="../asset/sicksheet.com.ico" rel="icon"/>
 </head>
 <body class="px-3 px-md-0">
-<nav aria-label="Eighth navbar example" class="navbar navbar-expand-lg">
+<nav aria-label="Eighth navbar example" class="navbar navbar-expand-lg bg-white sticky-top" id="navbar-example2">
 <div class="container">
 <a class="navbar-brand fw-bold" href="../index.html">
           SICK.SHEET.</a>
@@ -26,25 +26,31 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarinstance">
 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-<li class="nav-item dropdown">
+<li class="nav-item">
 <a class="nav-link" href="../tools/index.html">
-         Tools
-     </a>
+                 Tools
+             </a>
 </li>
-<li class="nav-item dropdown">
+<li class="nav-item">
 <a class="nav-link" href="../blog/index.html">
-         Blog
-     </a>
+                 Blog
+             </a>
 </li>
+</ul>
+<ul class="nav nav-pills">
+<li class="nav-item"> <a class="nav-link" href="#filter">Filter</a></li>
+<li class="nav-item"> <a class="nav-link" href="#text-mod">Text</a></li>
+<li class="nav-item"> <a class="nav-link" href="#math">Math</a></li>
+<li class="nav-item"> <a class="nav-link" href="#database">Database</a> </li>
+<li class="nav-item"> <a class="nav-link" href="#converter">Converter</a> </li>
 </ul>
 </div>
 </div>
 </nav>
 <div class="container max-width-80">
-<p class="mt-5"></p>
-<div class="container">
-<div class="row">
-<div class="col col-md-4 p-2">
+<!-- <p class="mt-5 "></p>-->
+<div class="scrollspy-example" data-bs-offset="0" data-bs-spy="scroll" data-bs-target="#navbar-example2" tabindex="0">
+<div class="pt-6" id="filter"><div class="row"><div class="col col-md-4 p-2">
 <div class="card">
 <div class="card-body">
 <h2 class="card-title"><a class="stretched-link" href="../first-n-rows.html" target="_blank">First n Rows</a></h2>
@@ -156,7 +162,7 @@
 <p class="card-text"><span class="badge bg-secondary rounded-pill filter">filter</span></p>
 </div>
 </div>
-</div><div class="col col-md-4 p-2">
+</div></div></div><div class="pt-6" id="text-mod"><div class="row"><div class="col col-md-4 p-2">
 <div class="card">
 <div class="card-body">
 <h2 class="card-title"><a class="stretched-link" href="../remove-leading-space.html" target="_blank">Remove Leading Space</a></h2>
@@ -244,7 +250,7 @@
 <p class="card-text"><span class="badge bg-secondary rounded-pill text-mod">text mod</span></p>
 </div>
 </div>
-</div><div class="col col-md-4 p-2">
+</div></div></div><div class="pt-6" id="math"><div class="row"><div class="col col-md-4 p-2">
 <div class="card">
 <div class="card-body">
 <h2 class="card-title"><a class="stretched-link" href="../add-tables.html" target="_blank">Add Tables</a></h2>
@@ -412,7 +418,7 @@
 <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
 </div>
 </div>
-</div><div class="col col-md-4 p-2">
+</div></div></div><div class="pt-6" id="database"><div class="row"><div class="col col-md-4 p-2">
 <div class="card">
 <div class="card-body">
 <h2 class="card-title"><a class="stretched-link" href="../join-tables.html" target="_blank">Join Tables</a></h2>
@@ -460,7 +466,7 @@
 <p class="card-text"><span class="badge bg-secondary rounded-pill database">database</span></p>
 </div>
 </div>
-</div><div class="col col-md-4 p-2">
+</div></div></div><div class="pt-6" id="converter"><div class="row"><div class="col col-md-4 p-2">
 <div class="card">
 <div class="card-body">
 <h2 class="card-title"><a class="stretched-link" href="../to-dsv.html" target="_blank">Table to DSV</a></h2>
@@ -524,9 +530,7 @@
 <p class="card-text"><span class="badge bg-secondary rounded-pill converter">converter</span></p>
 </div>
 </div>
-</div>
-</div>
-</div>
+</div></div></div> </div>
 </div>
 <div class="mt-6" id="footer">
 <div class="container text-center">
