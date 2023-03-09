@@ -1,4 +1,3 @@
-https://www.sicksheet.com/blog/ultimate-guide-on-how-to-join-tables
 https://www.sicksheet.com/blog/index
 https://www.sicksheet.com/index
 https://www.sicksheet.com/first-n-rows
@@ -31,7 +30,6 @@ https://www.sicksheet.com/subtract-tables
 https://www.sicksheet.com/multiply-tables
 https://www.sicksheet.com/divide-tables
 https://www.sicksheet.com/exponent-tables
-https://www.sicksheet.com/dot-product-tables
 https://www.sicksheet.com/abs-values
 https://www.sicksheet.com/round-values
 https://www.sicksheet.com/round-up
