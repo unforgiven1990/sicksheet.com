@@ -42,9 +42,9 @@ https://www.sicksheet.com/sum
 https://www.sicksheet.com/average
 https://www.sicksheet.com/min
 https://www.sicksheet.com/max
-https://www.sicksheet.com/random-table
 https://www.sicksheet.com/rank-table
 https://www.sicksheet.com/percentile-table
+https://www.sicksheet.com/random-table
 https://www.sicksheet.com/transpose-table
 https://www.sicksheet.com/sort-rows
 https://www.sicksheet.com/unique-values
