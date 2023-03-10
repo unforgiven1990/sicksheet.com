@@ -272,6 +272,7 @@ function main() {
     }
 
     $(".mytooltip").tooltip()
+    //$(".accordion-item .accordion-collapse").first().addClass("show")
     /**
     $('#download').on('click', function() {
         $('#exampleModal').show()

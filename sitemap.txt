@@ -24,6 +24,7 @@ https://www.sicksheet.com/upper
 https://www.sicksheet.com/lower
 https://www.sicksheet.com/left
 https://www.sicksheet.com/right
+https://www.sicksheet.com/add-space-comma
 https://www.sicksheet.com/join-text
 https://www.sicksheet.com/add-tables
 https://www.sicksheet.com/subtract-tables

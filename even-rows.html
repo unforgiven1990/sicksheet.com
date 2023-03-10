@@ -147,7 +147,7 @@
 
 <div id='start' class='wrapper pt-5'>
     <div class='steps' id='steps'>
-        <div class='step'>
+        <div class='step' id='step1'>
 <div class='number completed'>1</div>
 <div class='info'>
   <p class='title'>Input
@@ -161,7 +161,7 @@
 </div>
 </div>
 
-<div class='step'>
+<div class='step' id='step2'>
 <div class='number completed'>2</div>
 <div class='info'>
   <p class='title'>Download
@@ -189,87 +189,109 @@
     <div class="accordion-item">
     <h2 class="accordion-header" id="heading1">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" >
-        Q: Can I upload my data as .xlsx or .csv file?
+        Q: What does this tool to?
       </button>
     </h2>
-    <div id="collapse1" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+    <div id="collapse1" class="accordion-collapse collapse show"  data-bs-parent="#accordionExample">
       <div class="accordion-body">
-       A: Upload data as .xlsx or .csv file is not supported yet. You can copy paste your data from excel into the website table above.
+       A: It gives every even row of the table. For example, it gives you row 2,4,6,8,...
       </div>
     </div>
 </div><div class="accordion-item">
     <h2 class="accordion-header" id="heading2">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" >
-        Q: Is there a limit to the size of the spreadsheet I can upload?
+        Q: When is it useful?
       </button>
     </h2>
-    <div id="collapse2" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+    <div id="collapse2" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
       <div class="accordion-body">
-       A: Yes it can handle tables up to 6000 columns and rows. If you encounter lag, you can reduce the sheet size.
+       A: If your table is missformated and all the data are in every second row. If your table is designed in a way that every second row are correclated and you want to split the table.
       </div>
     </div>
 </div><div class="accordion-item">
     <h2 class="accordion-header" id="heading3">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" >
-        Q: It is normal that it lags a couple of seconds during copy paste?
+        Q: Can I upload my data as .xlsx or .csv file?
       </button>
     </h2>
-    <div id="collapse3" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+    <div id="collapse3" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
       <div class="accordion-body">
-       A: Yes this is normal for a web based application (especially when the data set is large).
+       A: Upload data as .xlsx or .csv file is not supported yet. You can copy paste your data from excel into the website table above.
       </div>
     </div>
 </div><div class="accordion-item">
     <h2 class="accordion-header" id="heading4">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" >
-        Q: The provided spreadsheet interface is very small. Can you make it bigger?
+        Q: Is there a limit to the size of the spreadsheet I can upload?
       </button>
     </h2>
-    <div id="collapse4" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+    <div id="collapse4" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
       <div class="accordion-body">
-       A: It is recommended to paste data into Excel to manage a bigger data sets.
+       A: Yes it can handle tables up to 6000 columns and rows. If you encounter lag, you can reduce the sheet size.
       </div>
     </div>
 </div><div class="accordion-item">
     <h2 class="accordion-header" id="heading5">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" >
-        Q: What plugin do you use to build this tool?
+        Q: It is normal that it lags a couple of seconds during copy paste?
       </button>
     </h2>
-    <div id="collapse5" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+    <div id="collapse5" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
       <div class="accordion-body">
-       A: Bootstrap, Handsontable.js and dataframe.js.
+       A: Yes this is normal for a web based application (especially when the data set is large).
       </div>
     </div>
 </div><div class="accordion-item">
     <h2 class="accordion-header" id="heading6">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" >
-        Q: Is the sicksheet.com free to use?
+        Q: The provided spreadsheet interface is very small. Can you make it bigger?
       </button>
     </h2>
-    <div id="collapse6" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+    <div id="collapse6" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
       <div class="accordion-body">
-       A: There is no charge for uploading your spreadsheet and using any online tool. However, donations to support the SickSheet project are appreciated.
+       A: It is recommended to paste data into Excel to manage a bigger data sets.
       </div>
     </div>
 </div><div class="accordion-item">
     <h2 class="accordion-header" id="heading7">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" >
-        Q: Who can I contact if I have a problem or question about the First N Rows tool?
+        Q: What plugin do you use to build this tool?
       </button>
     </h2>
-    <div id="collapse7" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+    <div id="collapse7" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
       <div class="accordion-body">
-       A: You can write a public post <a href='https://www.reddit.com/r/sicksheet/comments/11looge/official_bug_list/'>here.</a>
+       A: Bootstrap, Handsontable.js and dataframe.js.
       </div>
     </div>
 </div><div class="accordion-item">
     <h2 class="accordion-header" id="heading8">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" >
+        Q: Is the sicksheet.com free to use?
+      </button>
+    </h2>
+    <div id="collapse8" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       A: There is no charge for uploading your spreadsheet and using any online tool. However, donations to support the SickSheet project are appreciated.
+      </div>
+    </div>
+</div><div class="accordion-item">
+    <h2 class="accordion-header" id="heading9">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" >
+        Q: Who can I contact if I have a problem or question about the First N Rows tool?
+      </button>
+    </h2>
+    <div id="collapse9" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       A: You can write a public post <a href='https://www.reddit.com/r/sicksheet/comments/11looge/official_bug_list/'>here.</a>
+      </div>
+    </div>
+</div><div class="accordion-item">
+    <h2 class="accordion-header" id="heading10">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" >
         Q: Is my data secure when I use the First N Rows tool?
       </button>
     </h2>
-    <div id="collapse8" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+    <div id="collapse10" class="accordion-collapse collapse "  data-bs-parent="#accordionExample">
       <div class="accordion-body">
        A: Yes, the tool is pure client side which means we don't receive any data from you.
       </div>
@@ -421,7 +443,7 @@
 <div class="card" >
   <div class="card-body">
     <h2 class="card-title"><a href="number-to-char.html" target="_blank" class="stretched-link">Number to Character</a></h2>
-    <p class="card-text">Conver numbers to English Character. 1 = a, 2 = b, 3 = c, ... 26 = z.</p>
+    <p class="card-text">Convert numbers to English Character. 1 = a, 2 = b, 3 = c, ... 26 = z.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill filter">filter</span><span class="badge bg-secondary rounded-pill advanced">advanced</span></p>
     <img src="asset/img/number-to-char.svg" loading="lazy" alt="number-to-char illustration feature image" class="mx-auto d-block" style="width:100%">
 
