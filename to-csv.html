@@ -132,8 +132,8 @@
                                     <span class="">Table to CSV</span> Online
                                 </h1>
 
-                                <h3>Save Spreadsheet as Comma Separated Values (csv).</h3>
-                                Category: <span class="badge bg-secondary rounded-pill converter" >converter</span>
+                                <h2>Save Spreadsheet as Comma Separated Values (csv).</h2>
+                                Category: <span class="badge rounded-pill converter" >converter</span>
 
 
                                 <!--<br>
@@ -209,26 +209,30 @@
   <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
 </svg> <b>Download</b>
   </button>
+
+
   <div class="btn-group" role="group" >
-    <button id="downloadtype" type="button" class="btn btn-primary dropdown-toggle mytooltip" style="border-right: 1px solid #ffffff;" data-bs-toggle="dropdown" aria-expanded="false" title="Choose download type">
+    <button id="download_type" type="button" class="btn btn-primary dropdown dropdown-toggle" style="border-right: 1px solid #ffffff;" data-bs-toggle="dropdown" aria-expanded="false" >
       <b>.csv</b>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="downloadtype">
-      <li><a id="download_csv" class="dropdown-item" >.csv</a></li>
-      <li><a id="download_txt" class="dropdown-item" >.txt</a></li>
-      <li><a id="download_copy" class="dropdown-item" >Select Sheet</a></li>
-      <!--<li><a id="download_xls" class="dropdown-item" >.xls</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.pdf</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.jpg</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.ppt</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.word</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.json</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.py</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.feather</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >array</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >dict</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >object</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >dictionary</a></li>-->
+
+    <ul id="download_type_ul" class="dropdown-menu" aria-labelledby="downloadtype">
+      <li><span id="download_csv" class="dropdown-item pointer"  >.csv</span></li>
+      <li><span id="download_txt" class="dropdown-item pointer" >.txt</span></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><span id="download_copy" class="dropdown-item pointer" >Select Sheet</span></li>
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.xls</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.pdf</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.jpg</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.ppt</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.word</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.json</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.py</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.feather</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >array</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >dict</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >object</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >dictionary</a></li>-->
     </ul>
   </div>
 </div>
@@ -410,7 +414,7 @@
     <div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="to-dsv.html" target="_blank" class="stretched-link">Table to DSV</a></h2>
+    <h3 class="card-title "><a  href="to-dsv.html" target="_blank" class="stretched-link text-decoration-none">Table to DSV</a></h3>
     <p class="card-text">Save Spreadsheet as Delimiter Separated Values (dsv).</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill converter">converter</span></p>
     <img src="asset/img/to-dsv.svg" loading="lazy" alt="to-dsv illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -421,7 +425,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="to-json.html" target="_blank" class="stretched-link">Table to JSON</a></h2>
+    <h3 class="card-title "><a  href="to-json.html" target="_blank" class="stretched-link text-decoration-none">Table to JSON</a></h3>
     <p class="card-text">Save Spreadsheet as JavaScript Object Notation (json).</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill converter">converter</span></p>
     <img src="asset/img/to-json.svg" loading="lazy" alt="to-json illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -432,7 +436,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="to-dict.html" target="_blank" class="stretched-link">Table to Dictionary</a></h2>
+    <h3 class="card-title "><a  href="to-dict.html" target="_blank" class="stretched-link text-decoration-none">Table to Dictionary</a></h3>
     <p class="card-text">Save Spreadsheet as Dictionary.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill converter">converter</span></p>
     <img src="asset/img/to-dict.svg" loading="lazy" alt="to-dict illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -443,7 +447,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="to-array.html" target="_blank" class="stretched-link">Table to Array</a></h2>
+    <h3 class="card-title "><a  href="to-array.html" target="_blank" class="stretched-link text-decoration-none">Table to Array</a></h3>
     <p class="card-text">Save Spreadsheet as Array.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill converter">converter</span></p>
     <img src="asset/img/to-array.svg" loading="lazy" alt="to-array illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -454,7 +458,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="to-collection.html" target="_blank" class="stretched-link">Table to Collection</a></h2>
+    <h3 class="card-title "><a  href="to-collection.html" target="_blank" class="stretched-link text-decoration-none">Table to Collection</a></h3>
     <p class="card-text">Save Spreadsheet as collection.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill converter">converter</span></p>
     <img src="asset/img/to-collection.svg" loading="lazy" alt="to-collection illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -465,7 +469,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="from-csv.html" target="_blank" class="stretched-link">CSV to Table</a></h2>
+    <h3 class="card-title "><a  href="from-csv.html" target="_blank" class="stretched-link text-decoration-none">CSV to Table</a></h3>
     <p class="card-text">Paste in CSV files to create a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill converter">converter</span></p>
     <img src="asset/img/from-csv.svg" loading="lazy" alt="from-csv illustration feature image" class="mx-auto d-block" style="width:100%">

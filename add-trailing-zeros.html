@@ -132,8 +132,8 @@
                                     <span class="">Add Trailing Zeros</span> Online
                                 </h1>
 
-                                <h3>Add ending zeros to numbers in a spreadsheet.</h3>
-                                Category: <span class="badge bg-secondary rounded-pill math" >math</span>
+                                <h2>Add ending zeros to numbers in a spreadsheet.</h2>
+                                Category: <span class="badge rounded-pill math" >math</span>
 
 
                                 <!--<br>
@@ -223,26 +223,30 @@
   <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
 </svg> <b>Download</b>
   </button>
+
+
   <div class="btn-group" role="group" >
-    <button id="downloadtype" type="button" class="btn btn-primary dropdown-toggle mytooltip" style="border-right: 1px solid #ffffff;" data-bs-toggle="dropdown" aria-expanded="false" title="Choose download type">
+    <button id="download_type" type="button" class="btn btn-primary dropdown dropdown-toggle" style="border-right: 1px solid #ffffff;" data-bs-toggle="dropdown" aria-expanded="false" >
       <b>.csv</b>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="downloadtype">
-      <li><a id="download_csv" class="dropdown-item" >.csv</a></li>
-      <li><a id="download_txt" class="dropdown-item" >.txt</a></li>
-      <li><a id="download_copy" class="dropdown-item" >Select Sheet</a></li>
-      <!--<li><a id="download_xls" class="dropdown-item" >.xls</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.pdf</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.jpg</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.ppt</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.word</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.json</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.py</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >.feather</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >array</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >dict</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >object</a></li>-->
-      <!--<li><a id="download_xls" class="dropdown-item" >dictionary</a></li>-->
+
+    <ul id="download_type_ul" class="dropdown-menu" aria-labelledby="downloadtype">
+      <li><span id="download_csv" class="dropdown-item pointer"  >.csv</span></li>
+      <li><span id="download_txt" class="dropdown-item pointer" >.txt</span></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><span id="download_copy" class="dropdown-item pointer" >Select Sheet</span></li>
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.xls</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.pdf</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.jpg</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.ppt</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.word</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.json</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.py</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >.feather</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >array</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >dict</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >object</a></li>-->
+      <!--<li><span id="download_xls" class="dropdown-item pointer" >dictionary</a></li>-->
     </ul>
   </div>
 </div>
@@ -424,7 +428,7 @@
     <div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="add-tables.html" target="_blank" class="stretched-link">Add Tables</a></h2>
+    <h3 class="card-title "><a  href="add-tables.html" target="_blank" class="stretched-link text-decoration-none">Add Tables</a></h3>
     <p class="card-text">Add two spreadsheets together.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/add-tables.svg" loading="lazy" alt="add-tables illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -435,7 +439,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="subtract-tables.html" target="_blank" class="stretched-link">Subtract Tables</a></h2>
+    <h3 class="card-title "><a  href="subtract-tables.html" target="_blank" class="stretched-link text-decoration-none">Subtract Tables</a></h3>
     <p class="card-text">Subtract 2 spreadsheets.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/subtract-tables.svg" loading="lazy" alt="subtract-tables illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -446,7 +450,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="multiply-tables.html" target="_blank" class="stretched-link">Multiply Tables</a></h2>
+    <h3 class="card-title "><a  href="multiply-tables.html" target="_blank" class="stretched-link text-decoration-none">Multiply Tables</a></h3>
     <p class="card-text">Multiply 2 spreadsheets.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/multiply-tables.svg" loading="lazy" alt="multiply-tables illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -457,7 +461,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="divide-tables.html" target="_blank" class="stretched-link">Divide Tables</a></h2>
+    <h3 class="card-title "><a  href="divide-tables.html" target="_blank" class="stretched-link text-decoration-none">Divide Tables</a></h3>
     <p class="card-text">Divide the data of 2 spreadsheets.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/divide-tables.svg" loading="lazy" alt="divide-tables illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -468,7 +472,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="exponent-tables.html" target="_blank" class="stretched-link">Power Tables</a></h2>
+    <h3 class="card-title "><a  href="exponent-tables.html" target="_blank" class="stretched-link text-decoration-none">Power Tables</a></h3>
     <p class="card-text">Spreadsheet 1 acts as basis, spreadsheet 2 acts as exponent. </p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/exponent-tables.svg" loading="lazy" alt="exponent-tables illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -479,7 +483,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="abs-values.html" target="_blank" class="stretched-link">Absolute Values</a></h2>
+    <h3 class="card-title "><a  href="abs-values.html" target="_blank" class="stretched-link text-decoration-none">Absolute Values</a></h3>
     <p class="card-text">Turn negative values into positive values.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/abs-values.svg" loading="lazy" alt="abs-values illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -490,7 +494,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="round-values.html" target="_blank" class="stretched-link">Round Values</a></h2>
+    <h3 class="card-title "><a  href="round-values.html" target="_blank" class="stretched-link text-decoration-none">Round Values</a></h3>
     <p class="card-text">Round each number of a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/round-values.svg" loading="lazy" alt="round-values illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -501,7 +505,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="round-up.html" target="_blank" class="stretched-link">Round Up</a></h2>
+    <h3 class="card-title "><a  href="round-up.html" target="_blank" class="stretched-link text-decoration-none">Round Up</a></h3>
     <p class="card-text">Round up each number of a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/round-up.svg" loading="lazy" alt="round-up illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -512,7 +516,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="round-down.html" target="_blank" class="stretched-link">Round Down</a></h2>
+    <h3 class="card-title "><a  href="round-down.html" target="_blank" class="stretched-link text-decoration-none">Round Down</a></h3>
     <p class="card-text">Round down each number of a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/round-down.svg" loading="lazy" alt="round-down illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -523,7 +527,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="add-leading-zeros.html" target="_blank" class="stretched-link">Add Leading Zeros</a></h2>
+    <h3 class="card-title "><a  href="add-leading-zeros.html" target="_blank" class="stretched-link text-decoration-none">Add Leading Zeros</a></h3>
     <p class="card-text">Add starting zeros to numbers in a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/add-leading-zeros.svg" loading="lazy" alt="add-leading-zeros illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -534,7 +538,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="remove-leading-zeros.html" target="_blank" class="stretched-link">Remove Leading Zeros</a></h2>
+    <h3 class="card-title "><a  href="remove-leading-zeros.html" target="_blank" class="stretched-link text-decoration-none">Remove Leading Zeros</a></h3>
     <p class="card-text">Remove starting zeros to numbers in a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/remove-leading-zeros.svg" loading="lazy" alt="remove-leading-zeros illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -545,7 +549,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="remove-trailing-zeros.html" target="_blank" class="stretched-link">Remove Trailing Zeros</a></h2>
+    <h3 class="card-title "><a  href="remove-trailing-zeros.html" target="_blank" class="stretched-link text-decoration-none">Remove Trailing Zeros</a></h3>
     <p class="card-text">Remove ending zeros to numbers in a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/remove-trailing-zeros.svg" loading="lazy" alt="remove-trailing-zeros illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -556,7 +560,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="sum.html" target="_blank" class="stretched-link">Sum of Columns</a></h2>
+    <h3 class="card-title "><a  href="sum.html" target="_blank" class="stretched-link text-decoration-none">Sum of Columns</a></h3>
     <p class="card-text">Calculate the sum of each column in a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/sum.svg" loading="lazy" alt="sum illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -567,7 +571,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="average.html" target="_blank" class="stretched-link">Average of Columns</a></h2>
+    <h3 class="card-title "><a  href="average.html" target="_blank" class="stretched-link text-decoration-none">Average of Columns</a></h3>
     <p class="card-text">Calculate the average of each column in a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/average.svg" loading="lazy" alt="average illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -578,7 +582,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="min.html" target="_blank" class="stretched-link">Minimum of Columns</a></h2>
+    <h3 class="card-title "><a  href="min.html" target="_blank" class="stretched-link text-decoration-none">Minimum of Columns</a></h3>
     <p class="card-text">Calculate the minimum number of each column in a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/min.svg" loading="lazy" alt="min illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -589,7 +593,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="max.html" target="_blank" class="stretched-link">Maximum of Columns</a></h2>
+    <h3 class="card-title "><a  href="max.html" target="_blank" class="stretched-link text-decoration-none">Maximum of Columns</a></h3>
     <p class="card-text">Calculate the maximum number of each column in a spreadsheet.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/max.svg" loading="lazy" alt="max illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -600,7 +604,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="rank-table.html" target="_blank" class="stretched-link">Rank Table</a></h2>
+    <h3 class="card-title "><a  href="rank-table.html" target="_blank" class="stretched-link text-decoration-none">Rank Table</a></h3>
     <p class="card-text">Rank each number of a spreadsheet in ascending or descending order.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span><span class="badge bg-secondary rounded-pill advanced">advanced</span></p>
     <img src="asset/img/rank-table.svg" loading="lazy" alt="rank-table illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -611,7 +615,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="percentile-table.html" target="_blank" class="stretched-link">Percentile Table</a></h2>
+    <h3 class="card-title "><a  href="percentile-table.html" target="_blank" class="stretched-link text-decoration-none">Percentile Table</a></h3>
     <p class="card-text">Pertent Rank each number of a spreadsheet in ascending or descending order.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span><span class="badge bg-secondary rounded-pill advanced">advanced</span></p>
     <img src="asset/img/percentile-table.svg" loading="lazy" alt="percentile-table illustration feature image" class="mx-auto d-block" style="width:100%">
@@ -622,7 +626,7 @@
 </div><div class="col col-md-4 p-2">
 <div class="card" >
   <div class="card-body">
-    <h2 class="card-title"><a href="random-table.html" target="_blank" class="stretched-link">Fill Random Number</a></h2>
+    <h3 class="card-title "><a  href="random-table.html" target="_blank" class="stretched-link text-decoration-none">Fill Random Number</a></h3>
     <p class="card-text">Create a spreadsheet filled with random numbers.</p>
     <p class="card-text"><span class="badge bg-secondary rounded-pill math">math</span></p>
     <img src="asset/img/random-table.svg" loading="lazy" alt="random-table illustration feature image" class="mx-auto d-block" style="width:100%">
