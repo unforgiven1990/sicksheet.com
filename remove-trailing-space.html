@@ -127,7 +127,7 @@
                                 </h1>
 
                                 <h3>Remove ending spaces.</h3>
-                                Category: <span class="badge bg-secondary rounded-pill text-mod">text-mod</span>
+                                Category: <span class="badge bg-secondary rounded-pill text-mod" >text-mod</span>
 
 
                                 <!--<br>
@@ -138,10 +138,11 @@
                                 </svg>No Login<br><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                   <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                                 </svg>100% Free-->
-                                <img src="asset/img/remove-trailing-space.gif" loading="lazy" alt="remove-trailing-space illustration feature image" class="mx-auto d-block col-12 col-lg-8" style="">
+                                <img src="asset/img/remove-trailing-space.gif"  alt="remove-trailing-space illustration feature image" class="mx-auto d-block col-12 col-lg-8" style="">
+
+                                    <!--<a class="btn btn-primary px-4" href="#start">See Example</a>-->
 
                                 <div class="d-grid gap-3 d-sm-flex justify-content-center ">
-                                    <a class="btn btn-primary  px-4" href="#start">Start</a>
                                 </div>
                             </div>
                         </div>
@@ -156,13 +157,28 @@
         <div class='step' id='step1'>
 <div class='number completed'>1</div>
 <div class='info'>
-  <p class='title'>Input
-      <i  id="step1tooltip" class="mytooltip" data-bs-toggle="tooltip"  title="Copy paste your table here."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
-      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-    </svg></i>
-  </p>
-    <!--<div id="table1"></div>-->
+    <div class="d-flex justify-content-between align-items-center mb8">
+  <p class='title mytooltip pointer'  title="Copy paste your table here.">Input</p>
+         <div class='text-secondary'>
+           
+            
+            <button class="btn btn-outline-secondary btn-sm undo_button text-decoration-none mytooltip" href="" title="Undo" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+            </svg>
+            </button>
+            
+            
+            <button class="btn btn-outline-secondary btn-sm reset_button ml-3 text-decoration-none mytooltip tooltip-bg-primary" href="" title="Start New"  >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+            </svg>
+            </button>
+            
+            
+          
+            </div>
+</div>
     <div id="table1"></div>
 </div>
 </div>
@@ -170,17 +186,21 @@
 <div class='step' id='step2'>
 <div class='number completed'>2</div>
 <div class='info'>
-  <p class='title'>Download
-      <i  id="step2tooltip" class="mytooltip" data-bs-toggle="tooltip"  title="Copy or Download your result in CSV."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
-      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-    </svg></i>
-  </p>
-    <!--<div id="table1"></div>-->
+    <div class="d-flex justify-content-between align-items-center mb8">
+  <p class='title mytooltip pointer'  title="Copy or Download your result in CSV.">Download</p>
+        
+</div>
     <div id="table2"></div><div class="btn-group " role="group" aria-label="Button group with nested dropdown" style="width:100%;margin:0px;">
-  <button id="download" type="button" class="btn btn-primary" style="border-right: 2px solid #ffffff;"><b>Download</b></button>
+  <button id="download" type="button" class="btn btn-primary mytooltip" style="border-right: 2px solid #ffffff;" title="Click to download">
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+</svg> <b>Download</b>
+  </button>
   <div class="btn-group" role="group" >
-    <button id="downloadtype" type="button" class="btn btn-primary dropdown-toggle" style="border-right: 1px solid #ffffff;" data-bs-toggle="dropdown" aria-expanded="false">
+    <button id="downloadtype" type="button" class="btn btn-primary dropdown-toggle mytooltip" style="border-right: 1px solid #ffffff;" data-bs-toggle="dropdown" aria-expanded="false" title="Choose download type">
       <b>.csv</b>
     </button>
     <ul class="dropdown-menu" aria-labelledby="downloadtype">
@@ -470,8 +490,11 @@
   </div>
 </div>
 </div>
-    <a href="index.html">More Related Tools</a>
+    <p class=" spacer_small" ></p>
+   <a href="index.html"> <h2 class="text-center bigh2 mb-5" >... other 59 tools</h2></a>
 </div>
+
+
 
 
 
@@ -502,7 +525,7 @@
 
 <!--toast-->
 <div id="liveToast" class="position-fixed bottom-0 start-50 translate-middle " style="z-index:999999999999999;">
-  <div class="toast text-bg-primary"  aria-live="assertive" aria-atomic="true" data-bs-delay="1400">
+  <div class="toast text-bg-success"  aria-live="assertive" aria-atomic="true" data-bs-delay="1400">
     <div id='toastcontent' class="toast-body text-center">
       Copied to clipboard.
     </div>
